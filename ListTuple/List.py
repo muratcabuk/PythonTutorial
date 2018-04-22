@@ -21,6 +21,9 @@ s = sum(*myList3)
 print(s)
 #result: 3
 
+
+
+#if list elements are the same type we can concatanate 
 myList4 = []
 myList4 = myList2 + " Text 4"
 print(myList4)
@@ -44,6 +47,72 @@ set(myList5).difference(myList6)
 del myList5[1]
 print(myList5)
 #result : [1,3]
+
+# you can see more at readme.md file
+
+#======================Copy List===================================
+
+#shallow copy 
+
+myList7 = [1,2,3,4]
+myList8 = myList7
+
+print(myList8)
+#result: [1,2,3,4]
+
+myList7.append(5)
+print(myList8)
+#result: [1,2,3,4,5]
+#we added a element to myList7 but myList8 also affected from this operation.
+#in Python assign operation works as shallow copy.
+
+#deep copy
+
+myList9 = myList7[:]
+myList7.append(6)
+
+print(myList9)
+#result: [1, 2, 3, 4, 5]
+
+#also we can use the copy module
+import copy
+
+myList10 = copy.deepcopy(myList7)
+myList7.append(7)
+print(myList10)
+
+#result: [1, 2, 3, 4, 5, 6]
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 

@@ -1,3 +1,5 @@
+# Reemember: filter function must reruen always boolean
+
 #Example 1
 
 alphabets = ['a', 'b', 'd', 'e', 'i', 'j', 'o']
@@ -26,5 +28,11 @@ print(list(checkedNumbers))
 
 #Example
 myNumbers = ((1,2),(4,3),(5,6),(9,8))
-biggerNumbers = filter(lambda x: x[0] if (x[0] > x[1]) else x[1], map(lambda c:(c[0],c[1]),myNumbers))
+
+biggerNumbers = filter(lambda c: True if (c[0] > c[1]) else False, map(lambda c:(c[0],c[1]),myNumbers))
+
+print(list(biggerNumbers))
+
+#result: [(4, 3), (9, 8)]
+
 

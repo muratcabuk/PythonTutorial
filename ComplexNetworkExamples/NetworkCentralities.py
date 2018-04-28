@@ -145,11 +145,3 @@ for h in [f[0] for f in matrix]:
                 if hh!=[]:
                 #    print("hh --------------- {}".format(hh))
                 #    print("{} ile {} arasında {} var".format(h,k,t))
-                    
-            
-            
-            
-
-
-
-

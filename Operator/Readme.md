@@ -90,7 +90,7 @@ Many operations have an “in-place” version. Listed below are functions provi
 In those examples, note that when an in-place method is called, the computation and assignment are performed in two separate steps. The in-place functions listed below only do the first step, calling the in-place method. The second step, assignment, is not handled.
 
 operator.iadd(a, b)
-operator.__iadd__(a, b)
+operator.\__iadd\__(a, b)
 a = iadd(a, b) is equivalent to a += b.
 
 operator.iand(a, b)
@@ -146,22 +146,3 @@ a = itruediv(a, b) is equivalent to a /= b.
 operator.ixor(a, b)
 operator.__ixor__(a, b)
 a = ixor(a, b) is equivalent to a ^= b.
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-getter
-
-methodcaller

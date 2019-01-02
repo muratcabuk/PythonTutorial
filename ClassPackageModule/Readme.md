@@ -11,6 +11,10 @@ https://jeffknupp.com/blog/2013/08/16/open-sourcing-a-python-project-the-right-w
 https://github.com/jeffknupp/sandman2
 
 
+packages and modules
 
+
+
+https://realpython.com/python-modules-packages/
 
 

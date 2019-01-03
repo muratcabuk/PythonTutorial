@@ -9,6 +9,7 @@
 - [Machine Learning Plus 101 Exercises 1](https://www.machinelearningplus.com/python/101-numpy-exercises-python/)
 - [Game of Life : The way of Python and Numpy](https://www.labri.fr/perso/nrougier/teaching/numpy/numpy.html)
 - [Python Course : Numpy](https://www.python-course.eu/numerical_programming_with_python.php)
+- [Real Python - Everything about Python](https://realpython.com/)
 
 ## subjects
 
@@ -18,3 +19,4 @@
 4. [Broadcasting](/broadcasting/)
 5. [Iterating over Ndarray and reordering](/manupulation/)
 6. [Array manupulation](/manupulation/)
+7. [Vectorization](https://realpython.com/numpy-array-programming/#clustering-algorithms)

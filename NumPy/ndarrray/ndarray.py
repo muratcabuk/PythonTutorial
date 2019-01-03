@@ -55,24 +55,22 @@ print(d)
 #        [16, 17, 18, 19],
 #        [20, 21, 22, 23]]])
 
+#-------------ndarray.itemsize----------------------
 
 
+# dtype of array is int8 (1 byte) 
+import numpy as np 
+e = np.array([1,2,3,4,5], dtype = np.int8) 
+print(e.itemsize)
+
+#result : 1
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+# dtype of array is now float32 (4 bytes) 
+import numpy as np 
+f = np.array([1,2,3,4,5], dtype = np.float32) 
+print (f.itemsize)
+# result: 4
 
 
 #<<<<<<<<<<<<< array attributes <<<<<<<<<<<<

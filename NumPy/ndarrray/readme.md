@@ -81,5 +81,29 @@ print(d)
 #        [20, 21, 22, 23]]])
 
 ```
+- ndarray.itemsize: the size in bytes of each element of the array. For example, an array of elements of type float64 has itemsize 8 (=64/8), while one of type complex32 has itemsize 4 (=32/8). It is equivalent to ndarray.dtype.itemsize.
+
+``` python
+
+# dtype of array is int8 (1 byte) 
+import numpy as np 
+e = np.array([1,2,3,4,5], dtype = np.int8) 
+print (e.itemsize)
+
+```
+
+## Creation
+
+### numpy.empty
+
+numpy.empty(shape, dtype = float, order = 'C')
+
+- Shape: Shape of an empty array in int or tuple of int
+- Dtype: Desired output data type. Optional
+- Order : 'C' for C-style row-major array, 'F' for FORTRAN style column-major array
 
 
+``` python
+numpy.empty(shape, dtype = float, order = 'C')
+
+```

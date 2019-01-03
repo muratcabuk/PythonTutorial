@@ -3,5 +3,6 @@
         "platform": "amd64",
         "alias": null
     },
-    "python.linting.pylintEnabled": true
+    "python.linting.pylintEnabled": true,
+    "python.pythonPath": "/opt/anaconda3/bin/python"
 }

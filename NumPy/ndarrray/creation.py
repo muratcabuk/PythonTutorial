@@ -165,3 +165,120 @@ print(k)
 # >>>>>>>>>>>>>> numpy.geomspace(start, stop, num=50, endpoint=True, dtype=None) >>>>>>>>>>>>>>>>>
 # https://docs.scipy.org/doc/numpy-1.15.4/reference/generated/numpy.geomspace.html#numpy.geomspace
 
+
+#>>>>>>>>>>>>>>>>>>>>>>>>> Building Matrix >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+#>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+
+#>>>>>>>>>>>>>>>>>>>>> numpy.diag(v, k=0)>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+
+#Extract a diagonal or construct a diagonal array.
+
+import numpy as np
+
+
+k = np.arange(0,9).reshape(3,3) 
+
+diag = np.diag(k)
+print(diag)
+# result : [0 4 8]
+
+diag = np.diag(k,2)
+print(diag)
+# result : [2]
+
+#>>>>>>>>>>>>>>>>>>>>>>>>>>>>> np.diagflat >>>>>>>>>>>>>>>>>>>>>>>>>>>>><
+
+# Create a two-dimensional array with the flattened input as a diagonal.
+
+import numpy as np
+print(np.diagflat([1,2,3,4]))
+
+#result 
+# array([[1, 0, 0, 0],
+#       [0, 2, 0, 0],
+#       [0, 0, 3, 0],
+#       [0, 0, 0, 4]])
+
+
+print(np.diagflat([1,2,3,4]), 1)
+#result 
+# array([[0, 1, 0, 0, 0],
+#       [0, 0, 2, 0, 0],
+#       [0, 0, 0, 3, 0],
+#       [0, 0, 0, 0, 4],
+#       [0, 0, 0, 0, 0]])
+
+
+
+
+#>>>>>>>>>>>>>>>>>>>> numpy.tri(N, M=None, k=0, dtype=<class 'float'>) >>>>>>>>>>>>>>
+
+"""
+    An array with ones at and below the given diagonal and zeros elsewhere.
+    Parameters
+    ----------
+    N : int
+        Number of rows in the array.
+    M : int, optional
+        Number of columns in the array.
+        By default, `M` is taken equal to `N`.
+    k : int, optional
+        The sub-diagonal at and below which the array is filled.
+        `k` = 0 is the main diagonal, while `k` < 0 is below it,
+        and `k` > 0 is above.  The default is 0.
+    dtype : dtype, optional
+        Data type of the returned array.  The default is float.
+    Returns
+    -------
+    tri : ndarray of shape (N, M)
+        Array with its lower triangle filled with ones and zero elsewhere;
+        in other words ``T[i,j] == 1`` for ``i <= j + k``, 0 otherwise.
+"""
+
+import numpy as np
+print(np.tri(3, 5, 2, dtype=int))
+
+
+#array([[1, 1, 1, 0, 0],
+#       [1, 1, 1, 1, 0],
+#       [1, 1, 1, 1, 1]])
+
+
+print(np.tri(3, 5, -1))
+
+# result
+# array([[ 0.,  0.,  0.,  0.,  0.],
+#      [ 1.,  0.,  0.,  0.,  0.],
+#       [ 1.,  1.,  0.,  0.,  0.]]))
+
+
+#>>>>>>>>>>>>>>>>>>>< numpy.tril(m, k=0)>>>>>>>>>>>>>>>>>>><
+
+# Lower triangle of an array.
+#Return a copy of an array with elements above the k-th diagonal zeroed.
+#m : array_like, shape (M, N)
+#Input array.
+
+k# : int, optional
+#Diagonal above which to zero elements. k = 0 (the default) is the main diagonal, k < 0 is below it and k > 0 is above.
+
+#Returns:	
+#tril : ndarray, shape (M, N)
+#Lower triangle of m, of same shape and data-type as m.
+
+import numpy as np
+
+print(np.tril([[1,2,3],[4,5,6],[7,8,9],[10,11,12]], -1))
+# result :
+#array([[ 0,  0,  0],
+#       [ 4,  0,  0],
+#       [ 7,  8,  0],
+#       [10, 11, 12]])
+
+#>>>>>>>>>>>>>>>>>>>< numpy.triu(m, k=0)>>>>>>>>>>>>>>>>>>>
+
+#Upper triangle of an array.
+
+#Return a copy of a matrix with the elements below the k-th diagonal zeroed.
+
+

@@ -2,6 +2,9 @@
 
 - [SciPy](https://docs.scipy.org/doc/)
 - [Numpy Quickstart](https://docs.scipy.org/doc/numpy/user/quickstart.html)
+- [Numpy Reference](https://docs.scipy.org/doc/numpy-1.15.0/reference/index.html)
+- [Numpy Complete Table of Contents](https://docs.scipy.org/doc/numpy-1.15.0/contents.html)
+
 - [NumPy Array DataCamp Tutorial](https://www.datacamp.com/community/tutorials/python-numpy-tutorial)
 - [Tutorials Point NumPy Tutorial](https://www.tutorialspoint.com/numpy)
 - [Machine Learning Plus Numpy 1](https://www.machinelearningplus.com/python/numpy-tutorial-part1-array-python-examples/)

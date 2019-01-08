@@ -102,18 +102,75 @@ print(ggg)
 
 ``` python
 
+import numpy as np
 x = np.array([[1], [2], [3]])
 y = np.array([4, 5, 6])
 b = np.broadcast(x, y)
 print(b.shape)
 # result (3,3)
+row,col= b.iters
+print(row)
+
+#result: 
+#array([[1],
+#       [2],
+#       [3]])
+
+print(col.base)
+# result : [4 5 6]
+
 ```
 
 
 - broadcast_to(array, shape[, subok])	Broadcast an array to a new shape.
 - broadcast_arrays(*args, **kwargs)	Broadcast any number of arrays against each other.
 - expand_dims(a, axis)	Expand the shape of an array.
+
+``` python
+import numpy as np
+
+c = np.arange(9).reshape(3,3)
+print(c.shape)
+# result: (3,3)
+
+d = np.expand_dims(c, axis=0)
+
+print(d.shape)
+
+# result : (1, 3, 3)
+
+
+```
+
 - squeeze(a[, axis])	Remove single-dimensional entries from the shape of an array.
+
+
+``` python
+import numpy as np
+
+c = np.arange(16).reshape(4,2,2)
+print(c.shape)
+# result: (4,2,2)
+
+d = np.expand_dims(c, axis=0)
+
+print(d.shape)
+
+# result : (1,4,2,2)
+
+d = np.squeeze(d)
+
+print(d.shape)
+
+# result : (4,2,2)
+
+```
+
+
+
+
+
+
 
 ##### Changing kind of array
 - asarray(a[, dtype, order])	Convert the input to an array.

@@ -14,6 +14,14 @@
 - [Python Course : Numpy](https://www.python-course.eu/numerical_programming_with_python.php)
 - [Real Python - Everything about Python](https://realpython.com/)
 
+## Must be learned
+
+
+- [Data type objects ](https://www.numpy.org/devdocs/reference/arrays.dtypes.html#arrays-dtypes)
+- [Basic Types, Array Scalars](https://www.numpy.org/devdocs/user/basics.types.html)
+- [Scalar](https://docs.scipy.org/doc/numpy/reference/arrays.scalars.html#arrays-scalars)
+
+
 ## subjects
 
 1. [ndarray](/ndarray/)

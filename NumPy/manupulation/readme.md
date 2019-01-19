@@ -121,26 +121,34 @@ print(col.base)
 
 ```
 
-
 - broadcast_to(array, shape[, subok])	Broadcast an array to a new shape.
 - broadcast_arrays(*args, **kwargs)	Broadcast any number of arrays against each other.
 - expand_dims(a, axis)	Expand the shape of an array.
 
-``` python
+``` python 
+
 import numpy as np
 
-c = np.arange(9).reshape(3,3)
-print(c.shape)
-# result: (3,3)
+x = np.array([1,2])
+x.shape
+#result : (2,)
 
-d = np.expand_dims(c, axis=0)
 
-print(d.shape)
+y = np.expand_dims(x, axis=0)
+print(y)
+#result . array([[1, 2]])
+y.shape
+#result : (1, 2)
 
-# result : (1, 3, 3)
-
+y = np.expand_dims(x, axis=1)  # Equivalent to x[:,np.newaxis]
+print(y)
+# result : array([[1],
+#          [2]])
+y.shape
+#result : (2, 1)
 
 ```
+
 
 - squeeze(a[, axis])	Remove single-dimensional entries from the shape of an array.
 
@@ -183,17 +191,131 @@ print(d.shape)
 - asscalar(a)	Convert an array of size 1 to its scalar equivalent.
 - require(a[, dtype, requirements])	Return an ndarray of the provided type that satisfies requirements.
 
+This function is useful to be sure that an array with the correct flags is returned for passing to compiled code (perhaps through ctypes).
+
+    - requirements : str or list of str
+        The requirements list can be any of the following
+
+        ‘F_CONTIGUOUS’ (‘F’) - ensure a Fortran-contiguous array
+        ‘C_CONTIGUOUS’ (‘C’) - ensure a C-contiguous array
+        ‘ALIGNED’ (‘A’) - ensure a data-type aligned array
+        ‘WRITEABLE’ (‘W’) - ensure a writable array
+        ‘OWNDATA’ (‘O’) - ensure an array that owns its own data
+        ‘ENSUREARRAY’, (‘E’) - ensure a base array, instead of a subclass
+
+``` python
+import numpy as np
+x = np.arange(6).reshape(2,3)
+x.flags
+# Result :
+  #C_CONTIGUOUS : True
+  #F_CONTIGUOUS : False
+  #OWNDATA : False
+  #WRITEABLE : True
+  #ALIGNED : True
+  #WRITEBACKIFCOPY : False
+  #UPDATEIFCOPY : False
+y = np.require(x, dtype=np.float32, requirements=['A', 'O', 'W', 'F'])
+y.flags
+
+# result : 
+
+  #C_CONTIGUOUS : False
+  #F_CONTIGUOUS : True
+  #OWNDATA : True
+  #WRITEABLE : True
+  #ALIGNED : True
+  #WRITEBACKIFCOPY : False
+  #UPDATEIFCOPY : False
+
+
+
+```
+
+
 ##### Joining arrays
 - concatenate((a1, a2, …)[, axis, out])	Join a sequence of arrays along an existing axis.
 - stack(arrays[, axis, out])	Join a sequence of arrays along a new axis.
+
+``` python
+arrays = [np.random.randn(3, 4) for _ in range(10)]
+np.stack(arrays, axis=0).shape
+# result. (10, 3, 4)
+
+np.stack(arrays, axis=1).shape
+# result : (3, 10, 4)
+
+
+np.stack(arrays, axis=2).shape
+#result : (3, 4, 10)
+
+```
+
+
+
 - column_stack(tup)	Stack 1-D arrays as columns into a 2-D array.
+
+``` python
+import numpy as np
+a = np.array((1,2,3))
+b = np.array((2,3,4))
+np.column_stack((a,b))
+
+#result : array([[1, 2],
+#                [2, 3],
+#                [3, 4]])
+
+```
+
+
 - dstack(tup)	Stack arrays in sequence depth wise (along third axis).
+
+``` python
+a = np.array((1,2,3))
+b = np.array((2,3,4))
+np.dstack((a,b))
+# result: array([[[1, 2],
+#        [2, 3],
+#        [3, 4]]])
+
+a = np.array([[1],[2],[3]])
+b = np.array([[2],[3],[4]])
+np.dstack((a,b))
+#result :array([[[1, 2]],
+#       [[2, 3]],
+#       [[3, 4]]])
+
+```
+
 - hstack(tup)	Stack arrays in sequence horizontally (column wise).
 - vstack(tup)	Stack arrays in sequence vertically (row wise).
 - block(arrays)	Assemble an nd-array from nested lists of blocks.
 
 ##### Splitting arrays
 - split(ary, indices_or_sections[, axis])	Split an array into multiple sub-arrays.
+
+``` python
+import numpy as np
+
+x = np.arange(9.0)
+np.split(x, 3)
+# result : [array([ 0.,  1.,  2.]), array([ 3.,  4.,  5.]), array([ 6.,  7.,  8.])]
+
+x = np.arange(8.0)
+np.split(x, [3, 5, 6, 10])
+# result : [array([ 0.,  1.,  2.]),
+#          array([ 3.,  4.]),
+#          array([ 5.]),
+#          array([ 6.,  7.]),
+#          array([], dtype=float64)]
+
+
+
+
+```
+
+
+
 - array_split(ary, indices_or_sections[, axis])	Split an array into multiple sub-arrays.
 - dsplit(ary, indices_or_sections)	Split array into multiple sub-arrays along the 3rd axis (depth).
 - hsplit(ary, indices_or_sections)	Split an array into multiple sub-arrays horizontally (column-wise).

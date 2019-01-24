@@ -20,3 +20,9 @@
     Namespaces are one honking great idea -- let's do more of those!
 
 [50 Popular Python Open-Source Projects](https://hackernoon.com/50-popular-python-open-source-projects-on-github-in-2018-c750f9bf56a0)
+
+
+- [Pytonic 1](https://www.python.org/dev/peps/pep-0008/)
+- [Pytonic 2](https://docs.python-guide.org/writing/style/)
+- [Python vs Cpython](https://stackoverflow.com/questions/17130975/python-vs-cpython)
+- 

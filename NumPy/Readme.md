@@ -30,4 +30,7 @@
 4. [Broadcasting](/broadcasting/)
 5. [Iterating over Ndarray and reordering](/manupulation/)
 6. [Array manupulation](/manupulation/)
-7. [Vectorization](https://realpython.com/numpy-array-programming/#clustering-algorithms)
+6. [Linear Algebra Matrix](/matrix_linalg/matrix.md)
+7. [Linear Algebra](/matrix_linalg/linalg.md)
+8. [String Oprations](/string_operations/)
+9. [Vectorization](https://realpython.com/numpy-array-programming/#clustering-algorithms)

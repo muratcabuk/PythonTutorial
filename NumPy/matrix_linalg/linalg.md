@@ -3,6 +3,7 @@
 
 [SciPy Linalg Library](https://docs.scipy.org/doc/scipy-0.13.0/reference/linalg.html)
 
+[Lienar Algebra in 4 PAges](https://minireference.com/static/tutorials/linear_algebra_in_4_pages.pdf)
 
 
 
@@ -276,7 +277,16 @@ A matrix decomposition is a way of reducing a matrix into its constituent parts.
 - linalg.eigvalsh(a[, UPLO])	Compute the eigenvalues of a Hermitian or real symmetric matrix.
 #### Norms and other numbers
 - linalg.norm(x[, ord, axis, keepdims])	Matrix or vector norm.
+
+
 - linalg.cond(x[, p])	Compute the condition number of a matrix.
+
+     - [Condition Number of Matrix](http://www.cse.iitd.ernet.in/~dheerajb/CS210_lect07.pdf)
+     - [Condition Number Wiki](http://www.wikizero.biz/index.php?q=aHR0cHM6Ly9lbi53aWtpcGVkaWEub3JnL3dpa2kvQ29uZGl0aW9uX251bWJlcg)
+     - [Condition Number Mathworks](https://blogs.mathworks.com/cleve/2017/07/17/what-is-the-condition-number-of-a-matrix/)
+
+ 
+
 - linalg.det(a)	Compute the determinant of an array.
 - linalg.matrix_rank(M[, tol, hermitian])	Return matrix rank of array using SVD method
 - linalg.slogdet(a)	Compute the sign and (natural) logarithm of the determinant of an array.

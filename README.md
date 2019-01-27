@@ -26,3 +26,8 @@
 - [Pytonic 2](https://docs.python-guide.org/writing/style/)
 - [Python vs Cpython](https://stackoverflow.com/questions/17130975/python-vs-cpython)
 - 
+
+
+
+#### NLP
+SpiCy and NTLK

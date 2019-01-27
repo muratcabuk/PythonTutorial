@@ -31,3 +31,27 @@
 
 #### NLP
 SpiCy and NTLK
+
+### Chatbot
+#### Rasa 
+
+- https://rasa.com/docs/get_started_step1/
+
+- [Build a Machine Learning ChatBot in Python with RASA — Part 1](https://hackernoon.com/build-simple-chatbot-with-rasa-part-1-f4c6d5bb1aea)
+
+- Core = a chatbot framework with machine learning-based dialogue management
+
+- NLU = a library for natural language understanding with intent classification and entity extraction
+
+#### https://github.com/gunthercox/ChatterBot
+
+#### The Microsoft Cognitive Toolkit
+
+#### Azure Bot Service 
+- https://docs.microsoft.com/en-us/azure/bot-service/bot-service-overview-introduction?view=azure-bot-service-4.0
+
+
+####  LUIS
+- https://www.luis.ai/home
+
+

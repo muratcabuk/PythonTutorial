@@ -27,6 +27,14 @@
 - [Python vs Cpython](https://stackoverflow.com/questions/17130975/python-vs-cpython)
 - 
 
+Turkçe Matematik ve Yapay Zeka Dersleri
+
+
+http://sayilarvekuramlar.blogspot.com/?m=1
+
+
+
+
 
 
 #### NLP

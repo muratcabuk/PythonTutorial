@@ -33,7 +33,10 @@ Turkçe Matematik ve Yapay Zeka Dersleri
 http://sayilarvekuramlar.blogspot.com/?m=1
 
 
+### Network otomasyon
 
+- Paramiko
+- Netmiko
 
 
 
